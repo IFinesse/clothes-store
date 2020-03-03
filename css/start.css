@@ -190,6 +190,10 @@ input::placeholder {
     z-index: 10;
 }
 
+.show {
+    opacity: 1;
+}
+
 .mobile_menu-item {
     font-family: "Open Sans";
     font-size: 24px;
