@@ -10,7 +10,7 @@
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'thumbnail path', // replace with path to image extracted from catalog layout
+    thumbnail: './images/2.catalog/2.monki.jpg',
     preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '07cf6ce2-6eee-4e78-a441-f257fdea7ed6',
@@ -24,7 +24,7 @@
     fashion: 'Casual style',
     colors: ['Black', 'White'],
     sizes: ['UK 18'],
-    thumbnail: 'thumbnail path', // replace with image extracted from item layout
+    thumbnail: './images/2.catalog/2.boyfriend.jpg', 
     preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '0fdfa061-838d-42ab-ae06-99c66115f633',
@@ -38,7 +38,7 @@
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'thumbnail path', // replace with image extracted from item layout
+    thumbnail: './images/2.catalog/2.paris.jpg',
     preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '4a3d3c3e-9dc5-4d99-b33d-42b22e20dc0b',
@@ -150,7 +150,7 @@
     fashion: 'Casual style',
     colors: ['Dark Blue'],
     sizes: ['UK 19'],
-    thumbnail: 'thumbnail path', // replace with image extracted from item layout
+    thumbnail: './images/2.catalog/2.bustedd.png',
     preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: 'ccc8a5d5-7cdf-4706-95f2-abc64761400d',
@@ -164,7 +164,7 @@
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'thumbnail path', // replace with image extracted from item layout
+    thumbnail: './images/2.catalog/2.colour.jpg',
     preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: 'e50a3153-7833-4b85-b412-1a39d215fd38',
@@ -178,7 +178,7 @@
     fashion: 'Casual style',
     colors: ['Raw umber', 'Dark blue'],
     sizes: ['UK 18', 'UK 19'],
-    thumbnail: 'thumbnail path', // replace with image extracted from item layout
+    thumbnail: './images/2.catalog/2.oversized.jpg',
     preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: 'ff665110-5e7f-435d-b1b4-651c3d5050ca',
@@ -192,7 +192,7 @@
     fashion: 'Casual style',
     colors: ['Blue'],
     sizes: ['UK 18'],
-    thumbnail: 'thumbnail path', // replace with image extracted from item layout
+    thumbnail: './images/2.catalog/2.paul.jpg',
     preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }];
 

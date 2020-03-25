@@ -17,8 +17,13 @@ body *{
     display: none;
 }
 
-a:hover {
-    color: rgba(0, 0, 0, 0.6);
+a:hover{
+    /* color: rgba(0, 0, 0, 0.6); */
+    color: red;
+    transition: 0.1s ease-out;
+}
+
+a:hover span {
     color: red;
     transition: 0.1s ease-out;
 }
@@ -28,8 +33,12 @@ a:active {
 }
 
 button:hover {
-    border: 2px solid black;
+    border: 1px solid red;
     color: red;
+}
+
+.arrow:focus {
+    outline: none;
 }
 
 
@@ -54,7 +63,7 @@ header,
 .footer--desktop__bot {
     padding-left: 3%;
     padding-right: 3%;
-    min-width: 375px;
+    /* min-width: 375px; */
 }
 
 .header-top,
@@ -87,12 +96,12 @@ header,
 .signup_bag {
     display: flex;
     justify-content: space-between;
-    width: 200px;
+    width: 280px;
 }
 
 .bag {
     display: flex;
-    width: 67px;
+    width: 117px;
     justify-content: space-between;
     position: relative;
     top: 2px;
@@ -163,6 +172,10 @@ input::placeholder {
     background: transparent;
 }
 
+.header--mobile__main .bag{
+    width: 100px;
+}
+
  /* ///////////////// header */
  /* ///////////////// header */
  /* ///////////////// header */
@@ -178,7 +191,7 @@ input::placeholder {
 .mobile_menu {
     position: absolute;
     opacity: 0;
-    width: 97vw;
+    width: 95vw;
     height: 95vh;
     max-width: 767px;
     max-height: 667px;
@@ -186,8 +199,7 @@ input::placeholder {
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 20px;
-    border-top: 1px solid #e5e5e5;
-    z-index: 10;
+    z-index: -10;
 }
 
 .show {
@@ -229,6 +241,11 @@ input::placeholder {
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
+    min-width: 375px; 
+}
+
+.title a {
+    cursor: pointer;
 }
 
 .nike-red__caps {
@@ -343,6 +360,18 @@ input::placeholder {
     font-family: Roboto;
     font-size: 13px;
     letter-spacing: 0.39px;
+}
+
+.view_item_sign {
+    visibility: hidden;
+    position: absolute;
+    left: 25%;
+    top: 40%;
+    color: #f14a58;
+    font-family: "Open Sans";
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.66px;
 }
 
 .item img {
@@ -767,6 +796,12 @@ article {
 /* and (min-width: 375px) */
 @media only screen and (max-width: 767px) {
 
+    header,
+    .main,
+    footer {
+        min-width: 375px !important;
+    }
+
     .header--desktop {
         display: none;
     }
@@ -774,27 +809,46 @@ article {
     header {
         height: 71px;
         padding-right: 0;
+        border-bottom: 1px solid #e5e5e5;
 
     }
 
     .header--mobile {
         display: flex;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         align-items: center;
         padding-left: 3%;
         height: 100%;
+
     }
 
     .header--mobile .bag {
+        /* display: flex; */
+        justify-self: flex-end;
         position: relative;
         top: 6px;
     }
 
     .header--mobile__main {
+        position: relative;
         display: flex;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         width: 100%;
         padding: 24px 21px 24px 0;
+    }
+
+    .header--mobile__main .logo {
+        position: absolute;
+        left: 0;
+        top: 5px;
+    }
+
+    .header--mobile .bag {
+        position: absolute;
+        right: 20px;
+        top: 12px;
+        width: 110px;
+        justify-content: space-around;
     }
 
     .header--mobile__menu_button {
@@ -813,10 +867,11 @@ article {
         background-color: white;
     }
 
-    .header--mobile .bag {
-        width: 90px;
-        justify-content: space-around;
+    .nike-red__caps {
+        border-top: none;
     }
+
+    
 
 
     .section__title {
@@ -848,7 +903,7 @@ article {
     }
 
     .block1and2and3 {
-        margin-bottom: 0;
+        margin-bottom: -100px;
         margin-top: 0;
     }
 
@@ -974,4 +1029,22 @@ article {
         display: flex;
         justify-content: space-between;
     }
+}
+
+@media only screen and (max-width: 375px) {
+
+    header,
+    .header--mobile,
+    .main,
+    footer,
+    .footer--mobile {
+        min-width: 374px !important;
+        /* overflow: scroll; */
+    }
+
+    body {
+        width: 375px;
+        min-width: 375px;
+    }
+
 }

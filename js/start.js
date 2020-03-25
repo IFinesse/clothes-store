@@ -1,5 +1,8 @@
 "use strict";
 
+
+///expand search field in tablet mode
+
 let icon = document.getElementById("search_icon");
 let search_input = document.getElementsByClassName("search_input")[0];
 
@@ -11,6 +14,7 @@ icon.addEventListener('click', function() {
 })
 
 
+/////switch menu in mobile mode
 
 let open_menu = document.querySelector(".open_menu");
 let close_menu = document.querySelector(".close_menu");
@@ -33,46 +37,40 @@ function switch_menu () {
     };
 }
 
+
+
+
+
+//fill usual items in all modes
+
 let items = document.getElementsByClassName("item");
 
 for(let i=0; i<items.length;i++) {
     items[i].innerHTML = fill_item(items[i].id);
 }
 
-// function fill_item (item_id) {
-//     for(let i = 0; i<window.catalog.length;i++) {
-//         if(window.catalog[i].id == item_id) {
-//             if(window.catalog[i].hasNew == true) {
-//             return ` <div class='new_item_sign'>NEW</div>
-//             <img src='${window.catalog[i].thumbnail}' alt='clothing pic'>
-//                                 <h3 class='item_title'>${window.catalog[i].title}</h3>
-//                                 <p class='item_price'>&pound;${window.catalog[i].discountedPrice ? window.catalog[i].discountedPrice : window.catalog[i].price}</p>
-//                                 `
-//             } else {
-//                 return `<img src='${window.catalog[i].thumbnail}' alt='clothing pic'>
-//                 <h3 class='item_title'>${window.catalog[i].title}</h3>
-//                 <p class='item_price'>&pound;${window.catalog[i].discountedPrice ? window.catalog[i].discountedPrice : window.catalog[i].price}</p>
-//                 `
-//             }
-//         }
-//     }
-// }
 
 function fill_item (item_id) {
     for(let i = 0; i<window.catalog.length;i++) {
         if(window.catalog[i].id == item_id) {
             if(window.catalog[i].hasNew == true) {
-            return ` <div class='new_item_sign'>NEW</div>
+            return `<a href='./item.html'><div class='new_item_sign'>NEW</div>
+            <div class='view_item_sign'>View item</div>
             <img src='${window.catalog[i].thumbnail}' alt='clothing pic'>
                                 <h3 class='item_title'>${window.catalog[i].title}</h3>
-                                <p class='item_price'>&pound;${window.catalog[i].price}</p>
-                                `
+                                <p class='item_price'>&pound;${window.catalog[i].price.toFixed(2)}</p>
+                                </a>`
             } else {
-                return `<img src='${window.catalog[i].thumbnail}' alt='clothing pic'>
+                return `<a href='./item.html'>
+                <img src='${window.catalog[i].thumbnail}' alt='clothing pic'>
+                <div class='view_item_sign'>View item</div>
                 <h3 class='item_title'>${window.catalog[i].title}</h3>
-                <p class='item_price'>&pound;${window.catalog[i].price}</p>
-                `
+                <p class='item_price'>&pound;${window.catalog[i].price.toFixed(2)}</p>
+                </a>`
             }
         }
     }
 }
+
+
+
